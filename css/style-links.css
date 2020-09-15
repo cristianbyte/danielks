@@ -1,0 +1,130 @@
+
+header{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ededed;
+}
+
+header.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+header main{
+    width: 100%;
+}
+
+header main img{
+    width: 25vh;
+    border-radius: 50%;
+    box-shadow: -2px -2px 12px #cc191f99,
+                -2px -2px 12px #ececec,
+            inset   2px 2px 8px #cc191fdd,
+                2px 2px 8px #cc191faa;
+}
+
+header main ul li{
+    margin: 2vmax 0;
+    font-size: 2.5vh;
+}
+
+
+main button{
+    width: 80vmin;
+    height: 8vh;
+    border-radius: 5vmax;
+    border: none;
+    font-weight: 600;
+    color: white;
+    text-shadow: black -1px 1px;
+    background-color: #cc191f;
+    cursor: pointer;
+    /* text-transform: uppercase; */
+    box-shadow: -2px -2px 8px rgba(255, 255,255,1),
+                -2px -2px 12px rgba(255, 255,255,.5),
+        inset   2px 2px 4px rgba(255, 255,255,.1),
+                2px 2px 8px rgba(255, 255,255,.2);
+}
+
+main button:hover{
+    box-shadow:inset    -2px -2px 8px rgba(255, 255,255,1),
+                inset   -2px -2px 12px rgba(255, 255,255,.5),
+                inset   2px 2px 4px rgba(255, 255,255,.1),
+                inset   2px 2px 8px rgba(0, 0,0,.15);
+}
+
+header main{
+    text-align: center;
+}
+
+#popup{
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: -10%;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+}
+
+#popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: .5s;
+    top:0;
+}
+
+#popupcontent{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+#popupcontent img{
+    width: 100%;
+}
+
+#popupcontent button{
+    width: 100%;
+    height: 60px;
+    background-color: #292929;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#popupcontent ul a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #000000;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#popupcontent ul li:last-child a{
+    border-bottom: none;
+}
+
+#popupcontent ul a:after{
+    position: absolute;
+    content: url(../img/play.svg);
+    width: 30px;
+    color: red;
+    margin-left: 235px;
+}
+
+#popupcontent ul a:hover{
+    background-color: #cc191f;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel KS</title>
+    <link rel="stylesheet" href="css/style-links.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    
+    <header id="header">
+        
+        <main>
+            <img src="img/daniel-ks.jpg" alt="">
+            <ul>
+                <li id='cocacola' onclick="cocacolaf()"><button>CocaCola</button></li>
+                <li id='dejatellevar' onclick="dejatellevarf()"><button>Dejate LLevar</button></li>
+                <li><a href="https://www.youtube.com/channel/UC3JCCA73D8dsz-pJTMFjgJg" target="_blank" rel="noopener noreferrer" ><button>YouTube</button></a></li>
+                <li><a href="https://open.spotify.com/artist/0vunATKmxNrD0TvPldsaxx?si=ZZbtkq98QXKGIexQn5SSIw" target="_blank" rel="noopener noreferrer"><button>Spotify</button></a></li>
+                <li><a href="https://music.apple.com/us/artist/daniel-ks/1186972075" target="_blank" rel="noopener noreferrer"><button>Apple Music</button></a></li>
+                <li><a href="https://www.facebook.com/Daniel-Ks-430466093967315" target="_blank" rel="noopener noreferrer"><button>Facebook</button></a></li>
+                
+            </ul>
+        </main>
+    </header>
+
+    <div id="popup">
+        <div id="popupcontent">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const popupContent = document.getElementById('popupcontent');
+        const popup = document.getElementById('popup');
+        const blur = document.getElementById('header');
+        function cocacolaf(){
+            blur.classList.toggle('active');
+            popup.classList.toggle('active');
+            popupContent.innerHTML= '<img src="img/daniel-ks.jpg" alt=""><div class="popup-lnks"><ul><li><a href="https://open.spotify.com/track/5RwT1ba2GthJeChTMfEqCD" target="_blank" rel="noopener noreferrer">Spotify</a></li><li><a href="https://music.apple.com/us/album/coca-cola-single/1530633368" target="_blank" rel="noopener noreferrer">Apple Music</a></li><li><a href="https://www.youtube.com/watch?v=BQ01TYYWtxg" target="_blank" rel="noopener noreferrer">YouTube</a></li><li><a href="#">Deezer</a></li></ul></div><button onclick="cocacolaf()">Volver</button></div>'
+        };
+    
+        function dejatellevarf(){
+            blur.classList.toggle('active');
+            popup.classList.toggle('active');
+            popupContent.innerHTML= '<img src="img/danielks-dejate-llevar.jpg" alt=""><div class="popup-lnks"><ul><li><a href="https://open.spotify.com/track/2mfVmWF3x55owYPy633COj" target="_blank" rel="noopener noreferrer">Spotify</a></li><li><a href="https://music.apple.com/us/album/d%C3%A9jate-llevar/1502406628?i=1502406632" target="_blank" rel="noopener noreferrer">Apple Music</a></li><li><a href="https://www.youtube.com/watch?v=-zTHYANNCWs" target="_blank" rel="noopener noreferrer">YouTube</a></li><li><a href="#">Deezer</a></li></ul></div><button onclick="dejatellevarf()">Volver</button></div>'
+        };
+    </script>
+</body>
+</html>
