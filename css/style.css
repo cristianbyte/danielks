@@ -1,5 +1,6 @@
-
-
+:root{
+    --size: 100px;
+}
 .loader{
     width: 100vw;
     height: 100vh;
@@ -71,7 +72,7 @@
     box-sizing: border-box;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #31c5ff;
+    background-color: #ea00ff66;
     opacity: .8;
     transition-duration: .5s;
     transition-property: all;
@@ -126,10 +127,10 @@
 
 
 ::-webkit-scrollbar{
-    width: 15px;
+    width: 7px;
 }
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(to top, #ea00ff, #0011ff);
+    background-color: #ea00ff66;
     background-position: 400% 400%;
 }
 
@@ -154,9 +155,9 @@ section{
     width: 60vmax;
     height: 12vmax;
     font-size: 10vmax;
-    background: -webkit-linear-gradient(transparent, transparent), url(../img/merge2.jpg) left center;
+    background: -webkit-linear-gradient(transparent, transparent), url(../img/merged-image.jpg) left center;
     background-repeat: repeat-x;
-    background-size: auto 100%;
+    background-size: auto 70%;
     -webkit-text-fill-color: #ffffff;
     font-family: 'Oswald', sans-serif;
     font-weight: 900;
@@ -167,12 +168,47 @@ section{
 
 .nav-ul__li:hover{
     -webkit-text-fill-color: transparent;
-    animation: flash .7s ease infinite;
+    animation: flash 1s ease infinite;
 }
+
+@keyframes flash{
+    0%{background-position: 0;
+    }
+    19.99%{background-position: 0;
+    }
+    20%{
+        background-position: -10vmax;
+    }
+    39.99%{
+        background-position: -10vmax;
+    }
+    40%{
+        background-position: -20vmax;
+    }
+    59.99%{
+        background-position: -20vmax;
+    }
+    60%{
+        background-position: -30vmax;
+    }
+    79.99%{
+        background-position: -30vmax;
+    }
+    80%{
+        background-position: -40vmax;
+    }
+    99.99%{
+        background-position: -40vmax;
+    }
+    100%{
+        background-position: -50vmax;
+    }
+}
+
 
 .header{
     position: relative;
-    background:linear-gradient(to right, #BF953F, #B38728, #FBF5B7, #AA771C);
+    background-image: linear-gradient(324deg, transparent 0%, transparent 45%,rgba(186, 186, 186,0.04) 45%, rgba(186, 186, 186,0.04) 47%,transparent 47%, transparent 100%),linear-gradient(208deg, transparent 0%, transparent 40%,rgba(186, 186, 186,0.04) 40%, rgba(186, 186, 186,0.04) 80%,transparent 80%, transparent 100%),linear-gradient(202deg, transparent 0%, transparent 20%,rgba(186, 186, 186,0.04) 20%, rgba(186, 186, 186,0.04) 40%,transparent 40%, transparent 100%),linear-gradient(338deg, transparent 0%, transparent 10%,rgba(186, 186, 186,0.04) 10%, rgba(186, 186, 186,0.04) 72%,transparent 72%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
     height: 100vh;
     width: 100%;
     z-index: 300;
@@ -292,8 +328,8 @@ footer a{
     padding-top:30px;
 }
 
-.footer-main-box-item{
-    padding: 20px;
+.footer-main-box{
+    margin: 0 20px;
 }
 
 .footer-bottom{
@@ -306,39 +342,7 @@ footer a{
     color: #7d00c5;
 }
 
-@keyframes flash{
-    0%{background-position: 0;
-    }
-    19.99%{background-position: 0;
-    }
-    20%{
-        background-position: -15.4vmax;
-    }
-    39.99%{
-        background-position: -15.4vmax;
-    }
-    40%{
-        background-position: -33.3vmax;
-    }
-    59.99%{
-        background-position: -33.3vmax;
-    }
-    60%{
-        background-position: -52vmax;
-    }
-    79.99%{
-        background-position: -52vmax;
-    }
-    80%{
-        background-position: -71vmax;
-    }
-    99.99%{
-        background-position: -71vmax;
-    }
-    100%{
-        background-position: -99vmax;
-    }
-}
+
 
 @keyframes shiny {
     from{
